@@ -6,8 +6,9 @@
         "registry":"https://npm.pkg.github.com/@RobMayer"
       },
     "scripts": {
-        "build": "tsup src/index.ts --format cjs,esm --dts",
-        "lint": "tsc"
+      "build": "tsup src/*.ts --format cjs,esm --dts --no-splitting",
+      "clean": "rm -rf ./dist",
+      "lint": "tsc"
     },
     "main": "dist/index.js",
     "module": "dist/index.mjs",
